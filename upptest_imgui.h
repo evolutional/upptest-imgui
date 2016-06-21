@@ -230,7 +230,7 @@ namespace utest
 			else if (ignore_selected || node->selected)
 			{
 				result res;
-				auto r = utest::runner::run(node->test_info, res);
+				utest::runner::run(node->test_info, res);
 				node->last_result = res;
 			}
 		}
@@ -241,7 +241,7 @@ namespace utest
 			static const ::ImColor pass_color(50, 200, 50, 255);
 			static const ::ImColor unk_color(100, 100, 100, 255);
 
-			for (auto i = 0; i < node->children.size(); ++i)
+			for (auto i = 0U; i < node->children.size(); ++i)
 			{
 				const auto& child = node->children[i];
 
